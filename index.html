@@ -3,38 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Plantage</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>Welcome to Plantagebuurt</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 <body>
     <header>
-        <h1>Plantagebuurt</h1>
+        <img class="logo" src="img/logo.jpeg" alt="logo">
     </header>
-    <section>
-        <img src="img/homepage.jpg" alt="banner for the homepage">
-        <h2>Welcome to Plantage</h2>
+    
+    <section class="banner">
+        <img src="img/headertest.png" alt="Amsterdam">
     </section>
+
     <nav>
-        <ul>
+        <ul class="nav_links">
             <li><a href="/index.html">Home</a></li>
             <li><a href="/history.html">History</a></li>
             <li><a href="/artis.html">Artis</a></li>
-            <li><a href="/tourism.html" >Tourism</a></li>
-            <li><a href="/access.html" > Accessibility</a></li>
-            <li><a href="/contact.html"> Contact</a></li>
+            <li><a href="/tourism.html">Tourism</a></li>
+            <li><a href="/access.html">Accessibility</a></li>
+            <li><a href="/contact.html">Contact</a></li>
         </ul>
     </nav>
+    
     <main>
-        <article>
-            <h2>About Plantagebuurt</h2>
-            <p>information about it will be added soon....</p>
-        </article>
-        <aside>
-            <h3>pictures.. soon</h3>
+        <aside id="notification" class="notification">
+            <p>This website uses cookies.</p>
+            <button id="closeNotification">accept</button>
         </aside>
+
+        <script>
+            /*mandatory assignment, using java for cookie notifaction so when the user clicks accept it will be removed */
+            function showNotification() {
+                const notification = document.querySelector('.notification');
+                notification.style.display = 'block';
+            }
+        
+            function closeNotification() {
+                const notification = document.querySelector('.notification');
+                notification.style.display = 'none';
+            }
+
+            window.addEventListener('load', showNotification);
+ 
+            document.getElementById('closeNotification').addEventListener('click', closeNotification);
+        </script>
+
+        <h1>Welcome to Plantage</h1>
+
+        <article>
+            <p>Plantagebuurt is a relatively small neighborhood located in the center of Amsterdam. It’s known for its distinctive features, its history, and one of its famous sightseeing: <a href="artis.html">Artis the Royal Zoo</a>. Within this area, you can find some authentic restaurants as well as family-friendly attractions.</p>
+            <figure class="image">
+                <img src="img/IMG_6185.jpeg" alt="WertheimPark">
+                <figcaption>Wertheim Park</figcaption> 
+            </figure>
+            
+            <figure class="image">
+                <img src="img/IMG_6158.jpeg" alt="street full of restaurants">
+                <figcaption>streets covered in green</figcaption>
+            </figure>
+            
+            <figure class="image">
+                <img src="img/IMG_6164.jpeg" alt="the plantage">
+                <figcaption>Plantagebuurt</figcaption>
+            </figure>
+        </article>
     </main>
+
     <footer>
-        <p>copyright plantagebuurt</p>
+        <p>&copy; 2023 Plantage | All rights reserved.</p>
     </footer>
 </body>
 </html>

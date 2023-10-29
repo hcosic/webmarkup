@@ -1,0 +1,5 @@
+Student name: Hanna Cosic
+Student number: 718329
+Student class: HAITFT1C
+GitHub Repository: https://github.com/hcosic/webmarkup.git
+GitHub Pages URL: https://hcosic.github.io/webmarkup/
